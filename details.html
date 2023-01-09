@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="Description" content="Enter your description here" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Details page</title>
+    </head>
+    <body>
+        <!-- font-family: 'Abel', sans-serif; -->
+        <!-- font-family: 'Inter', sans-serif; -->
+        <!-- font-family: 'Roboto', sans-serif; -->
+
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+                        <div class="headlines">
+                            <p class="title">Machine Learning Night Fastaily</p>
+                            <div class="scedule">
+                                <p>
+                                    <span><i class="fas fa-calendar-alt mr-1"></i>Date</span><b>: </b>
+                                    December 1, 2023 - March 28, 2025
+                                </p>
+                                <p>
+                                    <span><i class="fas fa-clock mr-1"></i>Time</span><b>: </b>
+                                    10:00 am - 10:00 pm (UTC)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5" style="background: #fff; padding: 10px 20px; border-radius: 5px">
+                        <div class="cover">
+                            <p class="title">During this event, we’ll cover</p>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fuga!</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                                <li>How to get started learning JavaScript</li>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="buy-section">
+            <!-- <input type="text" value="#000000" disabled id="copy-int">
+            <input type="submit" id='copy-btn' value="Copy"> -->
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-4 text-center">
+                    <p class="title my-3">Purchase Ticket</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="price my-3"><span>Ticket Price : </span>£500.00</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <button class="btn my-3" id="change-btn">BuyTicket</button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="des-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="https://demo.themewinter.com/wp/courselog/wp-content/uploads/2021/01/event_image2.jpg" alt="" class="img-fluid cover-img">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="description">
+                            <p class="title">Description</p>
+                            <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, voluptatibus pariatur asperiores facere exercitationem dignissimos officiis soluta ratione minus totam consequatur fuga voluptates animi praesentium placeat perferendis nesciunt error quasi voluptas vitae modi! Animi molestias excepturi necessitatibus hic minus, error ipsum nostrum tempora eum vero quo harum amet nam esse in dicta consequatur dolore velit nihil dolor. Eligendi blanditiis vero exercitationem quia tenetur nihil. Natus earum adipisci eos, repellendus officia saepe aperiam nobis minima asperiores, dolorem, ab possimus iure aliquid laborum! Cum incidunt praesentium, earum qui, molestias illum magni, eum velit cumque odit aliquid? Ducimus quisquam voluptatibus aspernatur dolor numquam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <script>
+
+
+
+
+        const changeBtn = document.getElementById('change-btn');
+
+        
+
+        const changeColor = ()=>{
+            const generatedColor = genarateColor().HEX;
+            const buySection = document.querySelector('.buy-section')
+            buySection.style.backgroundColor = generatedColor;
+            copyInput.value = generatedColor;
+            copyBtn.value = 'Copy';
+        }
+
+        const genarateColor = ()=>{
+            const redRGB = Math.floor(Math.random()*255);
+            const greenRGB = Math.floor(Math.random()*255);
+            const blueRGB = Math.floor(Math.random()*255);
+            const RGB = `rgb(${redRGB},${greenRGB},${blueRGB})`
+            const HEX = `#${redRGB.toString(16)}${greenRGB.toString(16)}${blueRGB.toString(16)}`
+            return {RGB,HEX};
+        }
+
+        
+
+        changeBtn.addEventListener('click',changeColor)
+
+
+
+        const copyInput = document.getElementById('copy-int');
+        const copyBtn = document.getElementById('copy-btn');
+
+
+
+
+        const handleCopy = ()=>{
+            navigator.clipboard.writeText(copyInput.value)
+            copyBtn.value = 'Copied!';
+            setTimeout(()=>{copyBtn.value = 'Copy';},1500)
+        }
+
+        copyBtn.addEventListener('click',handleCopy);
+
+
+        </script>
+    </body>
+</html>

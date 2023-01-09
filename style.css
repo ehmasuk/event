@@ -1,0 +1,235 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+}
+.row{
+    margin: 0;
+}
+p{
+    margin-bottom: 0;
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+a:hover{
+    color: inherit;
+    text-decoration: inherit;
+}
+*::-webkit-scrollbar {
+    width: 20px;
+}
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #794EDA;
+}
+
+
+
+
+.attend-section{
+    padding: 50px 0;
+}
+.attend-section .title p{
+    font-size: 30px;
+    font-weight: 600;
+    color: #794EDA;
+}
+.attend-section .sort label{
+    font-size: 17px;
+}
+.attend-section .sort input{
+    height: 16px;
+    cursor: pointer;
+    width: 16px;
+}
+.attend-section .sort .main-label{
+    font-weight: 600;
+    color: #000;
+    margin-right: 20px;
+    font-size: 17px;
+}
+.event-box{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    margin-top: 40px;
+}
+.event-box img{
+    transition: .5s;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.event-box .img-box{
+    position: relative;
+}
+.event-box .tag{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 9;
+    display: flex;
+}
+.event-box .tag p{
+    margin-right: 10px;
+    color: #fff;
+    background-color: #794EDA;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.event-box:hover>.info>.head{
+    color: #794EDA;
+}
+.event-box:hover>.img-box>img{
+    transform: scale(1.1);
+}
+.event-box .date-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-box .date-box .date{
+    color: #794EDA;
+    transition: .5s;
+}
+.event-box .info{
+    padding: 30px 20px;
+    background-color: #fff;
+}
+.event-box .info .head{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Abel', sans-serif;
+}
+.event-box .info .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+
+
+
+/* details page */
+.hero-section{
+    padding: 50px 0;
+    background-color: #F4F4FC;
+}
+.hero-section .headlines .title{
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 48px;
+    max-width: 550px;
+}
+.hero-section .headlines::after{
+    content: '';
+    height: 100%;
+    width: 2px;
+    border: none;
+    background-color: #dadade;
+    position: absolute;
+    right: 48px;
+    top: 0;
+}
+.hero-section .headlines .scedule p{
+    margin-bottom: 15px;
+}
+.hero-section .headlines .scedule p i{
+    min-width: 16px;
+}
+.hero-section .headlines .scedule p span{
+    margin-right: 5px;
+    font-weight: 600;
+    min-width: 62px;
+    display: inline-block;
+    color: #794EDA;
+}
+.hero-section .headlines .scedule p  b{
+    color: #794EDA;
+}
+.hero-section .cover .title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 48px;
+    color: #794EDA;
+}
+.hero-section .cover ul{
+    padding-left: 20px;
+}
+.hero-section .cover ul li{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.buy-section{
+    padding: 30px 0;
+    background-color: #794EDA;
+    color: #fff;
+}
+.buy-section .title{
+    font-size: 26px;
+    font-weight: 600;
+}
+.buy-section .price{
+    font-weight: 600;
+}
+.buy-section .price span{
+    font-size: 15px;
+    text-transform: capitalize;
+    color: rgba(255,255,255,.9);
+    margin-right: 5px;
+}
+.buy-section .btn{
+    background: #ffa217;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+.buy-section .row{
+    max-width: 800px;
+    margin: auto;
+}
+.des-section{
+    padding: 50px 0;
+}
+.des-section .cover-img{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+.des-section .description .title{
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 30px;
+}
+.des-section .description .des{
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:1000px){
+    .hero-section .headlines::after{
+        display: none;
+    }
+}
